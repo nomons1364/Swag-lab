@@ -7,12 +7,14 @@ Login Test Fail
     Input text    id=user-name    user1
     Input text    id=password    password1
     Click Button    id=login-button
+    Page Should Contain    Epic sadface: Username and password do not match any user in this service
 
 Login Test Pass
     Open Browser    https://www.saucedemo.com/    chrome
     Input text    id=user-name    standard_user
     Input text    id=password    secret_sauce
     Click Button    id=login-button
+    Page Should Contain    Swag Labs
 
 Add and Remove to Cart
     Open Browser    https://www.saucedemo.com/    chrome
@@ -35,7 +37,9 @@ Check Out from Cart
     Input Text    //*[@id="postal-code"]    18000
     Click Button    xpath=//*[@id="continue"]
     Click Button    xpath=//*[@id="finish"]
+    Page Should Contain    Thank you for your order!
     Click Button    xpath=//*[@id="back-to-products"]
+    Page Should Contain    Swag Labs
     
 Fliter Test    
     Open Browser    https://www.saucedemo.com/    chrome
